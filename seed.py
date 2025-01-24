@@ -18,8 +18,13 @@ def seed_data():
             mot_de_passe="345",
             role="Livreur"
         )
-
-        session.add_all([utilisateur1, utilisateur2])
+        utilisateur3 = Utilisateur(
+            nom="Lolo",
+            email="lolo@umk.com",
+            mot_de_passe="345",
+            role="Livreur"
+        )
+        session.add_all([utilisateur1, utilisateur2, utilisateur3])
         session.commit()
 
         # Création d'un colis pour Esther
